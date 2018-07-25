@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title>Heart-Ui</title>
+    <style>
+        heart {
+            display: block;
+            margin: auto 2px;
+            width: 40px;
+            height: 40px;
+            background: url("./heart.png") no-repeat;
+            background-size: contain;
+        }
+        
+        .heart-box {
+            display: flex;
+            width: 300px;
+            height: 50px;
+            background-color: rgb(246, 246, 246);
+            border: 1px solid rgb(230, 230, 230);
+            border-radius: 4px;
+        }
+
+        .test-button {
+            margin-top: 10px;
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            vertical-align: middle;
+            background-color: rgb(246, 246, 246);
+            border: 1px solid rgb(230, 230, 230);
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 4px 8px;
+            font-size: 20px;
+            border: 2px solid #FFF;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:active {
+            filter: grayscale(0.5);
+        }
+        #addHeart {
+            background-color: forestgreen;
+            color: #FFF;
+        }
+        #removeHeart {
+            background-color: brown;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-box" id="heartBox">
+        <heart></heart>
+        <heart></heart>
+        <heart></heart>
+        <heart></heart>
+        <heart></heart>
+    </div>
+    <div class="test-button">
+        <button id="addHeart" onclick="addHeart()">add</button>
+        <button id="removeHeart" onclick="removeHeart()">remove</button>
+    </div>
+
+    <script type="text/javascript" id="startup">
+        function addHeart() {
+            let heartBox = document.getElementById("heartBox");
+            heartBox.insertAdjacentHTML("beforeend", "<heart></heart>");
+        }
+
+        function removeHeart() {
+            let hearts = document.getElementsByTagName("heart");
+            hearts[hearts.length - 1].remove();
+        }
+
+    </script>
+</body>
+</html>
