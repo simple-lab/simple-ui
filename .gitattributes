@@ -1,0 +1,2 @@
+# 배치파일은 Windows에서 사용하므로 CRLF 형식으로 처리할 수 있도록 지정
+*.bat text eol=crlf
