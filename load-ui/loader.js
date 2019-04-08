@@ -37,7 +37,6 @@ loadImageButton.addEventListener("click", function(event) {
 }, false);
 
 
-
 // [3] 페이지 닫기
 var pageExitButton = document.getElementById("pageExitButton");
 pageExitButton.onclick = function () {
