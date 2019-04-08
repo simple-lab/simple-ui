@@ -19,12 +19,7 @@
     </style>
 </head>
 <body>
-    <!-- [1] 페이지 닫기 -->
-    <section>
-        <button id="pageExitButton">닫기</button>
-    </section>
-
-    <!-- [2] GET Parameter로 전달된 값을 페이지에 디스플레이하기 -->
+    <!-- [1] GET Parameter로 전달된 값을 페이지에 디스플레이하기 -->
     <section>
         <div>
             <button onclick="location.href='?Token=1q2w3e4r'">token: 1q2w3e4r 테스트</button>
@@ -32,12 +27,17 @@
         <label id="dataLabel"></label>
     </section>
 
-    <!-- [3] 사진 가져오기 버튼 클릭해서 내 디바이스의 이미지 가져오기 -->
+    <!-- [2] 사진 가져오기 버튼 클릭해서 내 디바이스의 이미지 가져오기 -->
     <section>
         <button id="loadImageButton">사진 가져오기</button>
         <figure>
             <img id="imageViewer" />
         </figure>
+    </section>
+    
+    <!-- [3] 페이지 닫기 -->
+    <section>
+        <button id="pageExitButton">닫기</button>
     </section>
 
     <script type="text/javascript" src="loader.js"></script>
