@@ -17,15 +17,25 @@ dataLabel.textContent = `Token: ${token}`;
 
 
 // [2] 사진 가져오기 버튼 클릭해서 내 디바이스의 이미지 가져오기
-var loadImageButton = document.getElementById("loadImageButton");
-var imageViewer = document.getElementById("imageViewer");
-
 var fileDialog = document.createElement("input");
 fileDialog.type = "file";
 
-loadImageButton.addEventListener("click", function() {
+fileDialog.addEventListener("change", function(event) {
+    var file = fileDialog.files[0];
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function() {
+        imageViewer.src = reader.result;
+    }
+});
+
+var loadImageButton = document.getElementById("loadImageButton");
+var imageViewer = document.getElementById("imageViewer");
+
+loadImageButton.addEventListener("click", function(event) {
     fileDialog.click();
 }, false);
+
 
 
 // [3] 페이지 닫기
